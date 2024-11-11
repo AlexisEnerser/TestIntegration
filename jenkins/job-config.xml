@@ -1,0 +1,28 @@
+<project>
+    <actions/>
+    <description>Proyecto para compilar un servicio web .NET</description>
+    <scm class="hudson.plugins.git.GitSCM">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+                <url>git@github.com:AlexisEnerse/TestIntegration.git</url>
+                <credentialsId>githubSSH</credentialsId>
+            </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+            <hudson.plugins.git.BranchSpec>
+                <name>*/main</name>
+            </hudson.plugins.git.BranchSpec>
+        </branches>
+    </scm>
+    <builders>
+        <hudson.tasks.Shell>
+            <command>
+                dotnet restore
+                dotnet build --configuration Release
+            </command>
+        </hudson.tasks.Shell>
+    </builders>
+    <triggers/>
+    <disabled>false</disabled>
+</project>
