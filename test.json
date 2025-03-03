@@ -1,0 +1,15 @@
+{
+	"connectionLinkName": "test",
+	"connectionName": "Test",
+	"serviceName": "github",
+	"userAccess": false,
+	"isUserDefinedService": false,
+	"sharedBy": "805445904",
+	"scope": [
+		"gist",
+		"read:org",
+		"read:repo_hook",
+		"repo",
+		"user"
+	]
+}
